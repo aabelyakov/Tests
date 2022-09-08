@@ -1,12 +1,18 @@
 import os
-print 'setenv...',
-print os.environ['USERNAME']                 # show current shell variable value
+print('setenv...')
+os.environ['USERNAME'] = input('Введите UserName: ')
+# show current shell variable value
+print(os.environ['USERNAME'])
 
-os.environ['USERNAME'] = 'Brian'             # runs os.putenv behind the scenes
+# runs os.putenv behind the scenes
+os.environ['USERNAME'] = 'Brian'
 os.system('python echoenv.py')
 
-os.environ['USER'] = 'Arthur'                # changes passed to spawned programs
-os.system('python echoenv.py')               # and linked-in C library modules
+# changes passed to spawned programs
+os.environ['USER'] = 'Arthur'
 
-os.environ['USERNAME'] = raw_input('UserName')    
-print os.popen('python echoenv.py').read() 
+# and linked-in C library modules
+os.system('python echoenv.py')
+
+os.environ['USERNAME'] = input('Введите UserName: ')
+print(os.popen('python echoenv.py').read())
