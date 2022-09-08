@@ -6,30 +6,34 @@
 # Ned Batchelder, http://www.nedbatchelder.com
 #############################################################################
 import os, sys
-#############################################################################
+
+
 def showVar(varName, indent=''):
     val = os.environ[varName]
-    for p in val.split(';'):
-        print indent, p
-    #endfor    
-#enddef
-#============================================================================
+    for p in val.split(':'):
+        print(indent, p)
+    # endfor
+# enddef
+
+
 def showVars(prefix):
-    varNames = os.environ.keys()
+    varNames = list(os.environ.keys())
     varNames.sort()
     for varName in varNames:
         if varName.lower().startswith(prefix.lower()):
-            print varName
+            print(varName)
             showVar(varName, '   ')
-        #endif
-    #endfor    
-#enddef
-#============================================================================
+        # endif
+    # endfor
+# enddef
+
+
 if __name__ == '__main__':
     if len(sys.argv) > 1:
+        # «адана конкретна€ переменна€ окружени€
         showVars(sys.argv[1])
     else:
         showVars('')
-    #endif
-#endif
-#############################################################################
+    # endif
+# endif
+
