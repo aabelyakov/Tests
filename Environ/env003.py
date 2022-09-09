@@ -11,6 +11,6 @@ if os.path.exists(dotenv_path):
 # endif
 
 while 1:
-    key_value = input("Введите имя переменной окружения: ")
+    key_value = input("\nВведите имя переменной окружения: ")
     print(os.environ.get(key_value))
 # endwhile

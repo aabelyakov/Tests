@@ -1,6 +1,6 @@
 import os
 
-print("Ключи и значения переменных окружения интерпретатора PYTHON:")
+print("Переменные окружения системного интерпретатора (Ключ => Значение):")
 # print(os.environ)
 for key in os.environ:
     print(key, '=>', os.environ.get(key))
