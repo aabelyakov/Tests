@@ -14,6 +14,7 @@ headers = {
 }
 
 
+
 def get_articles_urls(url):
     with requests.Session() as session:
         response = session.get(url=url, headers=headers)
