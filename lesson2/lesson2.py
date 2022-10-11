@@ -20,17 +20,17 @@ headers = {
                   "Mobile/15A5341f Safari/604.1"
 }
 
-# req = requests.get(url, headers=headers)
-# src = req.text
-# print(1, src)
+req = requests.get(url, headers=headers)
+src = req.text
+print(1, src)
 
 # # Запись содержимого HTML-страницы в файл
-# with open("index.html", "w") as file:
-#     file.write(src)
+with open("index.html", "w") as file:
+    file.write(src)
 
 # Чтение содержимого HTML-страницы из файла
-with open("index.html") as file:
-    src = file.read()
+#with open("index.html") as file:
+    #src = file.read()
 
 soup = BeautifulSoup(src, "lxml")
 all_products_hrefs = soup.find_all(class_="mzr-tc-group-item-href")
