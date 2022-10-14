@@ -15,7 +15,7 @@ headers = {
 
 # collect all fests URLs
 fests_urls_list = []
-# for i in range(0, 192, 24):
+
 for i in range(0, 24, 24):
     url = f"https://www.skiddle.com/festivals/search/?ajaxing=1&sort=0&fest_name=&from_date=24%20Jan%202021&to_date=&where%5B%5D=2&where%5B%5D=3&where%5B%5D=4&where%5B%5D=6&where%5B%5D=7&where%5B%5D=8&where%5B%5D=9&where%5B%5D=10&maxprice=500&o={i}&bannertitle=May"
 
